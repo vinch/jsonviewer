@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	padding: 25px;
+	font-family: "Monaco", "Courier", monospace;
+	font-size: 80%;
+}
+.level {
+	padding-left: 50px;
+	clear: both;
+}
+.key {
+	float: left;
+	padding-right: 10px;
+	font-weight: bold;
+}
+.string {
+	color: green;
+}
+.number {
+	color: blue;
+}
+.boolean {
+	color: purple;
+}
+.null {
+	color: red;
+}
+b {
+	display: block;
+	font-weight: normal;
+}
+i {
+	font-style: normal;
+	color: black!important;
+}
