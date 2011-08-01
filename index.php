@@ -58,14 +58,15 @@ function parse($node, $level, $last) {
 	
 }
 
-header('Content-Type: text/html;charset=utf8');
-
 $url = (isset($_GET['url']) && !empty($_GET['url'])) ? $_GET['url'] : 'https://graph.facebook.com/99394368305';
 $json = json_decode(file_get_contents($url));
-?>
 
+?>
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf8" />
+	<title>JSON Viewer</title>
 	<link rel="stylesheet" href="jv.css" type="text/css" />
 </head>
 <body>
