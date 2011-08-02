@@ -33,7 +33,7 @@ function parse($node, $level, $last) {
 			break;
 		
 		case 'string':
-			echo '<div class="string">"'.$node.'"';
+			echo '<div class="string">"'.htmlentities($node, ENT_NOQUOTES, "UTF-8").'"';
 			if (!$last) echo '<i>,</i>';
 			echo '</div>';
 			break;
