@@ -33,7 +33,7 @@ function parse($node, $level, $last) {
 			break;
 		
 		case 'string':
-			echo '<div class="string">"'.htmlentities($node, ENT_NOQUOTES, "UTF-8").'"';
+			echo '<div class="string">"'.preg_replace("/(http:\/\/[^\s]+)/", "<a href=\"$1\" target=\"_blank\">$1</a>", htmlentities($node, ENT_NOQUOTES, "UTF-8")).'"';
 			if (!$last) echo '<i>,</i>';
 			echo '</div>';
 			break;
@@ -46,7 +46,8 @@ function parse($node, $level, $last) {
 			break;
 		
 		case 'boolean':
-			echo '<div class="boolean">'.$node;
+			$boolean = $node ? "true" : "false";
+			echo '<div class="boolean">'.$boolean;
 			if (!$last) echo '<i>,</i>';
 			echo '</div>';
 			break;
@@ -58,7 +59,7 @@ function parse($node, $level, $last) {
 	
 }
 
-$url = (isset($_GET['url']) && !empty($_GET['url'])) ? $_GET['url'] : 'https://graph.facebook.com/99394368305';
+$url = (isset($_GET['url']) && !empty($_GET['url'])) ? $_GET['url'] : 'sample.json';
 $json = json_decode(file_get_contents($url));
 
 ?>

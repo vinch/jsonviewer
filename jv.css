@@ -16,8 +16,11 @@ body {
 	padding-right: 10px;
 	font-weight: bold;
 }
-.string {
+.string, .string a {
 	color: green;
+}
+.string a:hover {
+	text-decoration: none;
 }
 .number {
 	color: blue;
