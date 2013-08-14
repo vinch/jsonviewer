@@ -1,7 +1,7 @@
 {
 	"samples" : [
 		"http://v1n.ch/jsonviewer/?url=https%3A%2F%2Fgraph.facebook.com%2Fonemd",
-		"http://v1n.ch/jsonviewer/?url=http%3A%2F%2Fweather.yahooapis.com%2Fforecastjson%3Fw%3D2502265",
+		"http://v1n.ch/jsonviewer/?url=http%3A%2F%2Fapi.openweathermap.org%2Fdata%2F2.1%2Ffind%2Fname%3Fq%3Dsan%2520francisco",
 		"http://v1n.ch/jsonviewer/?url=http%3A%2F%2Fstorify.com%2Fxdamman%2Fgoogle.json"	
 	],
 	"types": {
